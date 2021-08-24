@@ -36,7 +36,7 @@ function Footer(props) {
           onClick={(event) => handleClick(props.value, event)}
           className="btn"
         >
-          click me
+          click {props.id}
         </button>
 
       
