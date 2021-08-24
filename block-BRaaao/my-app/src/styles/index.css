@@ -1,0 +1,134 @@
+/*root*/
+
+:root {
+  --primary: rgb(35, 52, 123);
+  --accent: rgb(249, 35, 77);
+  --textdark: rgb(1, 18, 45);
+  --textlight: rgb(95, 94, 101);
+  --textwhite: rgb(255, 255, 255);
+  --bg: rbg(223, 236, 255);
+  --low: rgb(14, 24, 66);
+}
+
+.padding {
+  padding: 5rem 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.flex-30 {
+  flex: 0 1 30%;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.container {
+  max-width: 1160px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.brand h1 {
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.list-control {
+  margin-left: 2rem;
+}
+
+/*navbar*/
+
+.navbar a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.navbar {
+  padding: 2rem;
+
+  top: 0;
+  width: 100%;
+}
+
+/*news*/
+
+.news .heading-secondary {
+  color: var(--textdark);
+  text-align: center;
+}
+
+.news {
+  background: #dfecff;
+}
+
+.news-article {
+  margin-bottom: 90px;
+}
+
+.news-article h3 {
+  font-weight: 900;
+  color: var(--textdark);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.news-article p {
+  margin-bottom: 1rem;
+}
+
+.news-article a {
+  color: var(--textdark);
+}
+
+.news-article .active {
+  color: var(--accent);
+}
+
+.width-full {
+  width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  background-color: var(--accent);
+  color: white;
+  transition: all 200ms ease-in-out;
+  font-size: 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.btn:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  opacity: 0.8;
+  color: white;
+}
+
+/*footer*/
+.footer {
+  background-color: var(--primary);
+  padding: 2rem 0;
+}
+
+.footer .fab {
+  margin-left: 2rem;
+  font-size: 2rem;
+}
