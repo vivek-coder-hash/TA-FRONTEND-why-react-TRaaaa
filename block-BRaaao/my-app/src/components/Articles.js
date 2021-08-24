@@ -1,4 +1,5 @@
-import data from '../data.json';
+//import data from '../data.json';
+import allArticles from './data/articles';
 
 //Articless , Article component
 //Data can only be send from parents to child . here Footers is parent and Footer is child.
@@ -10,8 +11,8 @@ function Articles() {
       <section className="news padding">
         <h3 className="heading-secondary">Our latest News</h3>
         <div className="container flex justify-between align-center wrap">
-          {data.map((animal) => (
-            <Article {...animal} />
+          {allArticles.map((animal) => (
+            <Article key={animal.publishedAt} {...animal} />
           ))}
         </div>
       </section>
@@ -21,8 +22,8 @@ function Articles() {
 
 function Article(props) {
   return (
-    <article class="news-article flex-30">
-      <img class="width-full" src={props.urlToImage} alt="news" />
+    <article className="news-article flex-30">
+      <img className="width-full" src={props.urlToImage} alt="news" />
       <h3>{props.title}</h3>
       <p>{props.content}</p>
 
