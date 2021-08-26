@@ -1,4 +1,4 @@
-import data from '../data.json';
+import colors from '../data';
 
 function Articles() {
   return (
@@ -6,10 +6,9 @@ function Articles() {
       <section className="overview card-container">
         <div className="container">
           <div className="flex wrap">
-              {data.map((color)=>(
-                  <Article {...color} key={color.} />
-              ))}
-           
+            {Object.keys(colors).map((key) => (
+              <Article name={key} allColors={colors[key]} />
+            ))}
           </div>
         </div>
       </section>
@@ -17,24 +16,23 @@ function Articles() {
   );
 }
 
-
 function Article(props) {
-    return (
-        <div class="card overview-card">
-        <header class="card-header flex">
-         <h4>Page views</h4>
-         <i class="fab fa-facebook-f"></i>
-        </header>
+  return props.allColors.map((color, i) => (
+    <div className="card overview-card" style={{ backgroundColor: color }}>
+      <header className="card-header flex">
+        <h4>{color}</h4>
+        <i class="fab fa-facebook-f"></i>
+      </header>
 
-        <div class="flex ">
-            <h3>87</h3>
-            <div>
-             <i class="fas fa-chevron-up"></i>
-                <span>3%</span>
-            </div>
+      <div className="flex ">
+        <h3>{i === 0 ? 50 : i * 100}</h3>
+        <div>
+          <i className="fas fa-chevron-up"></i>
+          <span>3%</span>
         </div>
-   </div>
-    )
+      </div>
+    </div>
+  ));
 }
 
-export default Articles
+export default Articles;
